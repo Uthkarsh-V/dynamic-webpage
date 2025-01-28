@@ -1,0 +1,202 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.nav:hover {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(237, 9, 9, 0.2);
+}
+
+.nav ul li:hover {
+    background-color: #cc1515;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.nav ul li:hover a {
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(174, 162, 162);
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background-image: 
+        linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px; /* Adjust grid size */
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+header a {
+    color: #fff2f2;
+    margin-right: 40px;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #ff4081;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 30s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0;
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik', sans-serif;
+    font-size: 16em;
+    line-height: 1em;
+    color: hsl(0, 21%, 60%);
+    position: relative;
+    animation: grow 2s ease-in-out;
+}
+
+@keyframes grow {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+.banner .content h1::after {
+    position: absolute;
+    inset: 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #181616;
+    color: transparent;
+}
+
+.banner .content .author {
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    max-width: 200px;
+}
+
+.banner .content h2 {
+    font-size: 2em;
+    position: relative;
+    right: inherit;
+}
+
+.banner .content .model {
+    background-image: url(images/model.png);
+    width: 70%;
+    height: 70vh;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 2;
+    border-radius: 10px
+}
+
+@media screen and (max-width: 1023px) {
+   .banner .slider {
+    width: 150px;
+    height: 150px;
+    left: calc(50% - 75px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    animation: autoRun 30s linear infinite;
+    z-index: 2;
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0;
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(250px);
+}
+    .banner .content h1 {
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #ded4d4;
+        font-size: 7em;
+    }
+    .banner .content .author {
+        object-position: center;
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
