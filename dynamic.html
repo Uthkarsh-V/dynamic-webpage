@@ -12,15 +12,15 @@
             box-sizing: border-box;
         }
         body{
-            background-color: #191313d1;
+            background-color: hsl(0, 10%, 67%);
             background-image:
             repeating-linear-gradient(
                 to right, transparent 0 100px,
-                #c0c3d722 100px 101px
+                hsl(0, 15%, 64%) 100px 101px
             ),
             repeating-linear-gradient(
                 to bottom, transparent 0 100px,
-                #70748d22 100px 101px
+                hsl(0, 14%, 64%) 100px 101px
             );
         }
         
@@ -42,18 +42,28 @@
     <link rel="stylesheet" href="dynamic.css">
 </head>
 <body>
-    <header><h2>
-        
+    <div class="banner">
+   <header>
+    <h2>
         <nav>
             <a href="">Home</a>
             <a href="">Contacts</a>
             <a href="">Info</a>
         </nav>
-    </header></h2>
+    </h2>
+    <div class="banner-header">
+        <h2 style="text-align: center;">WELCOME TO DYNAMIC </h2>
+    </div>
+</header>
 
-    
-    
-    <div class="banner">
+<style>
+    .banner-header {
+        margin-top: 400px;
+       margin-left: 25px;
+      
+       font-size: xx-large;
+    }
+</style>
         <div class="slider" style="--quantity: 10">
             <div class="item" style="--position: 1"><img src="image 1.jpg" alt=""></div>
             <div class="item" style="--position: 2"><img src="image 2.jpg" alt=""></div>
@@ -76,6 +86,10 @@
                 <nobr><h2>UTHKARSH GOWDA.V</h2></nobr>
                 <P>WEB DESIGNER</P>
                
+            
+                <p>
+                   
+                </p>
             </div>
             <div class="model"></div>
         </div>
