@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+        body {
             background-color: hsl(0, 10%, 67%);
-            background-image:
-            repeating-linear-gradient(
+            background-image: repeating-linear-gradient(
                 to right, transparent 0 100px,
                 hsl(0, 15%, 64%) 100px 101px
             ),
@@ -23,8 +21,7 @@
                 hsl(0, 14%, 64%) 100px 101px
             );
         }
-        
-        body::before{
+        body::before {
             position: absolute;
             width: min(1400px, 90vw);
             top: 10%;
@@ -38,62 +35,45 @@
             background-position: top center;
             pointer-events: none;
         }
+        .banner-header {
+            margin-top: 400px;
+            margin-left: 25px;
+            font-size: xx-large;
+        }
     </style>
     <link rel="stylesheet" href="dynamic.css">
 </head>
 <body>
     <div class="banner">
-   <header>
-    <h2>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Contacts</a>
-            <a href="">Info</a>
-        </nav>
-    </h2>
-    <div class="banner-header">
-        <h2 style="text-align: center;">WELCOME TO DYNAMIC </h2>
-    </div>
-</header>
-
-<style>
-    .banner-header {
-        margin-top: 400px;
-       margin-left: 25px;
-      
-       font-size: xx-large;
-    }
-</style>
+        <header>
+            <nav>
+                <a href="">Home</a>
+                <a href="">Contacts</a>
+                <a href="">Info</a>
+            </nav>
+            <div class="banner-header">
+                <h2 style="text-align: center;">WELCOME TO DYNAMIC</h2>
+            </div>
+        </header>
         <div class="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"><img src="image 1.jpg" alt=""></div>
-            <div class="item" style="--position: 2"><img src="image 2.jpg" alt=""></div>
-            <div class="item" style="--position: 3"><img src="image 3.jpg" alt=""></div>
-            <div class="item" style="--position: 4"><img src="image 4.jpg" alt=""></div>
-            <div class="item" style="--position: 5"><img src="image 5.jpg" alt=""></div>
-            <div class="item" style="--position: 6"><img src="image 6.jpg" alt=""></div>
-            <div class="item" style="--position: 7"><img src="image 7.jpg" alt=""></div>
-            <div class="item" style="--position: 8"><img src="image 8.jpg" alt=""></div>
-            <div class="item" style="--position: 9"><img src="image 9.jpg" alt=""></div>
-            <div class="item" style="--position: 10"><img src="image 10.jpg" alt=""></div>
-          
+            <div class="item" style="--position: 1"><img src="image 1.jpg" alt="Image 1"></div>
+            <div class="item" style="--position: 2"><img src="image 2.jpg" alt="Image 2"></div>
+            <div class="item" style="--position: 3"><img src="image 3.jpg" alt="Image 3"></div>
+            <div class="item" style="--position: 4"><img src="image 4.jpg" alt="Image 4"></div>
+            <div class="item" style="--position: 5"><img src="image 5.jpg" alt="Image 5"></div>
+            <div class="item" style="--position: 6"><img src="image 6.jpg" alt="Image 6"></div>
+            <div class="item" style="--position: 7"><img src="image 7.jpg" alt="Image 7"></div>
+            <div class="item" style="--position: 8"><img src="image 8.jpg" alt="Image 8"></div>
+            <div class="item" style="--position: 9"><img src="image 9.jpg" alt="Image 9"></div>
+            <div class="item" style="--position: 10"><img src="image 10.jpg" alt="Image 10"></div>
         </div>
         <div class="content">
-            
-              
-            </h1>
             <div class="author">
-               
                 <nobr><h2>UTHKARSH GOWDA.V</h2></nobr>
-                <P>WEB DESIGNER</P>
-               
-            
-                <p>
-                   
-                </p>
+                <p>WEB DESIGNER</p>
             </div>
             <div class="model"></div>
         </div>
     </div>
-    
 </body>
 </html>
